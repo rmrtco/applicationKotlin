@@ -2,6 +2,8 @@ package site.rakshith.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.preference.PreferenceManager
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
@@ -12,9 +14,14 @@ import site.rakshith.myapplication.pojo.OnboardItem
 class OnBoarding : AppCompatActivity() {
     var items = ArrayList<OnboardItem>()
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_on_boarding)
+
+        val nextBtn = findViewById<Button>(R.id.nextBtn)
+        val skipBtn = findViewById<Button>(R.id.skipBtn)
+        val launchAppBtn = findViewById<Button>(R.id.launchAppBtn)
 
         /* hide actionbar */
         supportActionBar?.hide()
@@ -29,6 +36,37 @@ class OnBoarding : AppCompatActivity() {
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
         }.attach()
+
+        nextBtn.run {
+
+            viewPager.adapter = onBoardAdapter
+
+            TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            }.attach()
+
+            setOnClickListener {
+
+            }
+        }
+
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+            override fun onPageSelected(position: Int) {
+                when(position){
+                    items.size-1 ->{
+                        nextBtn.visibility = View.GONE
+                        skipBtn.visibility = View.GONE
+                        launchAppBtn.visibility = View.VISIBLE
+                    }
+                    else -> {
+                        launchAppBtn.visibility = View.GONE
+                        nextBtn.visibility = View.VISIBLE
+                        skipBtn.visibility = View.VISIBLE
+                    }
+
+                }
+            }
+
+        })
     }
 
     override fun onDestroy() {
@@ -39,6 +77,7 @@ class OnBoarding : AppCompatActivity() {
         }
         super.onDestroy()
     }
+
 
     private fun addItems(){
         items.add(
@@ -62,6 +101,5 @@ class OnBoarding : AppCompatActivity() {
                 , "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 , R.color.colorAccent))
     }
-
-
 }
+

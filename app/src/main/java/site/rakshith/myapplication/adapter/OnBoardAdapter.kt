@@ -26,7 +26,7 @@ class OnBoardAdapter(
     }
 
     override fun onBindViewHolder(holder: OnBoardViewHolder, position: Int) {
-        var onboardItem :OnboardItem? = items.get(position)
+        val onboardItem :OnboardItem? = items.get(position)
         if (onboardItem != null) {
             holder.onboardImg?.setImageResource(onboardItem.image)
             holder.descriptionHeader?.setText(onboardItem.header)

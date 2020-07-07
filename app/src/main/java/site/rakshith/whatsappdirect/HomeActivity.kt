@@ -30,7 +30,7 @@ class HomeActivity : AppCompatActivity() {
         val submitBtn = findViewById<Button>(R.id.submitBtnWhatsapp)
         val submitBtnBusiness =findViewById<Button>(R.id.submitBtnWhatsappBusiness)
         val messageEditText = findViewById<EditText>(R.id.message)
-        val flotingActionButton = findViewById<FloatingActionButton>(R.id.floatingActionButton)
+        val floatingActionButton = findViewById<FloatingActionButton>(R.id.floatingActionButton)
         var countryCode = "+91"
         var message = ""
 
@@ -38,7 +38,7 @@ class HomeActivity : AppCompatActivity() {
         ccp.enableSetCountryByTimeZone(true)
 
 
-        flotingActionButton.setOnClickListener {
+        floatingActionButton.setOnClickListener {
             startActivity(Intent(applicationContext,OnBoarding::class.java))
             finish()
         }

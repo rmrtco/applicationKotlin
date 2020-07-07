@@ -44,7 +44,7 @@
         android:layout_height="48dp"
         android:layout_margin="16dp"
         android:background="@drawable/material_rounded_button_all_corner"
-        android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
+        android:drawableEnd="@drawable/arrow_forward_24px"
         android:paddingStart="16dp"
         android:paddingLeft="32dp"
         android:paddingEnd="16dp"

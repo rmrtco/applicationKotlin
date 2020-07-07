@@ -27,6 +27,11 @@ class OnBoarding : AppCompatActivity() {
         /* hide actionbar */
         supportActionBar?.hide()
 
+        skipBtn.setOnClickListener {
+            startActivity(Intent(applicationContext,HomeActivity::class.java))
+            finish()
+        }
+
         addItems()
 
         val viewPager = findViewById<ViewPager2>(R.id.onBoardViewPager)
@@ -90,7 +95,7 @@ class OnBoarding : AppCompatActivity() {
     private fun addItems(){
         items.add(
             OnboardItem(R.drawable.onboard1
-                ,"Whatsapp direct"
+                ,"Whatsapp Direct"
                 , "This application enables you to send WhatsApp Message without saving recipient number"
                 , R.color.colorAccent))
         items.add(

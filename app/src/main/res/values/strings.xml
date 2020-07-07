@@ -11,4 +11,5 @@
     <string name="type_message">Message (Not Mandatory)</string>
     <string name="type_recipient_number">Recipient Number</string>
     <string name="send_message_on_whatsapp_business">Message On W.Business</string>
+    <string name="whatsapp_direct">WhatsApp Direct</string>
 </resources>

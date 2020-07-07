@@ -90,23 +90,23 @@ class OnBoarding : AppCompatActivity() {
     private fun addItems(){
         items.add(
             OnboardItem(R.drawable.onboard1
-                ,"Header 1"
-                , "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                ,"Whatsapp direct"
+                , "This application enables you to send WhatsApp Message without saving recipient number"
                 , R.color.colorAccent))
         items.add(
             OnboardItem(R.drawable.onboard2
-                ,"Header 2"
-                , "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                ,"Step 1"
+                , "Select Recipient Country and type recipient Phone number. By default country is set on device time zone"
                 , R.color.colorAccent))
         items.add(
             OnboardItem(R.drawable.onboard3
-                ,"Header 3"
-                , "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                ,"Step 2"
+                , "Type the message, this step is optional skip this step if you intend to send a file"
                 , R.color.colorAccent))
         items.add(
             OnboardItem(R.drawable.onboard4
-                ,"Header 4"
-                , "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                ,"Step 3"
+                , "Click send, this will open Chat with recipient number on WhatsApp, now you can chat with this person"
                 , R.color.colorAccent))
     }
 }

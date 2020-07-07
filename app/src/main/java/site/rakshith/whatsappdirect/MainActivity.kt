@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
 
-            },1000
+            },700
         )
         super.onStart()
     }

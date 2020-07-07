@@ -1,4 +1,4 @@
-package site.rakshith.myapplication
+package site.rakshith.whatsappdirect
 
 import org.junit.Test
 

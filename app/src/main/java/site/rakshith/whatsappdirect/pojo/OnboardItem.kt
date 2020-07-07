@@ -1,4 +1,4 @@
-package site.rakshith.myapplication.pojo
+package site.rakshith.whatsappdirect.pojo
 
 class OnboardItem(
 

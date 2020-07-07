@@ -1,5 +1,6 @@
-package site.rakshith.myapplication
+package site.rakshith.whatsappdirect
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,8 +9,8 @@ import androidx.preference.PreferenceManager
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import site.rakshith.myapplication.adapter.OnBoardAdapter
-import site.rakshith.myapplication.pojo.OnboardItem
+import site.rakshith.whatsappdirect.adapter.OnBoardAdapter
+import site.rakshith.whatsappdirect.pojo.OnboardItem
 
 class OnBoarding : AppCompatActivity() {
     var items = ArrayList<OnboardItem>()
@@ -44,8 +45,15 @@ class OnBoarding : AppCompatActivity() {
             TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             }.attach()
 
-            setOnClickListener {
+            nextBtn.setOnClickListener {
+                if(viewPager.currentItem < items.size){
+                    viewPager.currentItem = viewPager.currentItem + 1
+                }
+            }
 
+            launchAppBtn.setOnClickListener{
+                startActivity(Intent(applicationContext,HomeActivity::class.java))
+                finish()
             }
         }
 

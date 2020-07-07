@@ -1,4 +1,4 @@
-package site.rakshith.myapplication
+package site.rakshith.whatsappdirect
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

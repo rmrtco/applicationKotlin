@@ -1,4 +1,4 @@
-package site.rakshith.myapplication.adapter
+package site.rakshith.whatsappdirect.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import site.rakshith.myapplication.R
-import site.rakshith.myapplication.pojo.OnboardItem
+import site.rakshith.whatsappdirect.R
+import site.rakshith.whatsappdirect.pojo.OnboardItem
 
 class OnBoardAdapter(
     private val context :Context,

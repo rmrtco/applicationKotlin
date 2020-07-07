@@ -7,4 +7,8 @@
     <string name="heading_text">Heading</string>
     <string name="logoimage">LogoImage</string>
     <string name="launch_application">Launch Application</string>
+    <string name="send_message">Send Message</string>
+    <string name="type_message">Message (Not Mandatory)</string>
+    <string name="type_recipient_number">Recipient Number</string>
+    <string name="send_message_on_whatsapp_business">Message On W.Business</string>
 </resources>

@@ -1,12 +1,9 @@
-package site.rakshith.myapplication
+package site.rakshith.whatsappdirect
 
-import android.content.Context
-import android.content.Context.MODE_PRIVATE
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.widget.Toast
 import androidx.preference.PreferenceManager
 
 
@@ -35,7 +32,9 @@ class MainActivity : AppCompatActivity() {
                         startActivity(Intent(applicationContext,OnBoarding::class.java))
                         finish()
                     }else{
-                        Toast.makeText(this@MainActivity,"Onboarding is over",Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(applicationContext,HomeActivity::class.java))
+                        finish()
+                        // Toast.makeText(this@MainActivity,"Onboarding is over",Toast.LENGTH_SHORT).show()
                     }
                 }
 

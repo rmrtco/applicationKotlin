@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.rilixtech.widget.countrycodepicker.CountryCodePicker
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -29,11 +30,18 @@ class HomeActivity : AppCompatActivity() {
         val submitBtn = findViewById<Button>(R.id.submitBtnWhatsapp)
         val submitBtnBusiness =findViewById<Button>(R.id.submitBtnWhatsappBusiness)
         val messageEditText = findViewById<EditText>(R.id.message)
+        val flotingActionButton = findViewById<FloatingActionButton>(R.id.floatingActionButton)
         var countryCode = "+91"
         var message = ""
 
         //ccp.setCountryForNameCode("IN")
         ccp.enableSetCountryByTimeZone(true)
+
+
+        flotingActionButton.setOnClickListener {
+            startActivity(Intent(applicationContext,OnBoarding::class.java))
+            finish()
+        }
 
 
         /*
